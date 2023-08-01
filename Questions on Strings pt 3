@@ -1,0 +1,32 @@
+// lecture 30 strings part 3
+       public class solution
+   {
+    public static boolean areRotation(String s1, String s2)
+   {
+    if(s1.length()!=s2.length()) return false;
+    int len = s1.length();
+    for(int i=0;i<len;i++)
+    {
+    s1= s1.subString (1) + s1.subString(0,1);
+        if(s2.equals(rotatedStr)) return true;
+    }
+    //all rotation checked and did not return true means not a rotation
+    return false;
+
+   }
+   }
+   disadvantages of array
+   1.similar data type
+   2.fixed size
+   3.costly deletion O(n)
+   4.costly insertion when array is full or at any particular index1
+   5.contiguous memory allocation
+
+
+   //every element to look like:
+   data|reference to next item
+
+   solution offered:
+   store 2 things:
+   1.own data
+   2.link to next item
